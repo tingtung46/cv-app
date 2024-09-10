@@ -1,24 +1,24 @@
 import Section from "./Section";
 
-export default function GeneralInfoForm({ generalInfo, setGeneralInfo }) {
+export default function GeneralInfoForm({ resumeData, setResumeData }) {
   const handleFirstName = (e) => {
-    setGeneralInfo({ ...generalInfo, firstName: e.target.value });
+    setResumeData({ ...resumeData, [resumeData.firstName]: e.target.value });
   };
 
   const handleLastName = (e) => {
-    setGeneralInfo({ ...generalInfo, lastName: e.target.value });
+    setResumeData({ ...resumeData, [resumeData.lastName]: e.target.value });
   };
 
   const handleEmail = (e) => {
-    setGeneralInfo({ ...generalInfo, email: e.target.value });
+    setResumeData({ ...resumeData, [resumeData.email]: e.target.value });
   };
 
   const handlePhoneNumber = (e) => {
-    setGeneralInfo({ ...generalInfo, phoneNumber: e.target.value });
+    setResumeData({ ...resumeData, [resumeData.phoneNumber]: e.target.value });
   };
 
   const handleLocation = (e) => {
-    setGeneralInfo({ ...generalInfo, location: e.target.value });
+    setResumeData({ ...resumeData, [resumeData.location]: e.target.value });
   };
 
   return (
