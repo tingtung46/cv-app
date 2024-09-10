@@ -1,28 +1,26 @@
 import Section from "./Section";
 import Button from "./Button";
-import { useState } from "react";
 
-export default function GeneralInfoForm() {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-
+export default function GeneralInfoForm({ generalInfo, setGeneralInfo }) {
   const handleFirstName = (e) => {
-    setFirstName(e.target.value);
+    setGeneralInfo({ ...generalInfo, firstName: e.target.value });
   };
 
   const handleLastName = (e) => {
-    setLastName(e.target.value);
+    setGeneralInfo({ ...generalInfo, lastName: e.target.value });
   };
 
-  const fullName = firstName + " " + lastName;
+  const handleEmail = (e) => {
+    setGeneralInfo({ ...generalInfo, email: e.target.value });
+  };
 
-  class GeneralResult {
-    constructor(fullName) {
-      this.fullName = fullName;
-    }
-  }
+  const handlePhoneNumber = (e) => {
+    setGeneralInfo({ ...generalInfo, phoneNumber: e.target.value });
+  };
 
-  const generalInfoResult = new GeneralResult(fullName);
+  const handleLocation = (e) => {
+    setGeneralInfo({ ...generalInfo, location: e.target.value });
+  };
 
   const handleNext = (e) => {
     e.preventDefault();
@@ -55,17 +53,32 @@ export default function GeneralInfoForm() {
 
           <div>
             <label htmlFor="email-address">Email</label>
-            <input type="email" name="email-address" id="email-address" />
+            <input
+              type="email"
+              name="email-address"
+              id="email-address"
+              onChange={handleEmail}
+            />
           </div>
 
           <div>
             <label htmlFor="phone-number">Phone Number</label>
-            <input type="tel" name="phone-number" id="phone-number" />
+            <input
+              type="tel"
+              name="phone-number"
+              id="phone-number"
+              onChange={handlePhoneNumber}
+            />
           </div>
 
           <div>
             <label htmlFor="location">Location</label>
-            <input type="text" name="location" id="location" />
+            <input
+              type="text"
+              name="location"
+              id="location"
+              onChange={handleLocation}
+            />
           </div>
 
           <Button
@@ -75,8 +88,6 @@ export default function GeneralInfoForm() {
             text="Next"
           ></Button>
         </form>
-
-        <h1>{generalInfoResult.fullName}</h1>
       </>
     </Section>
   );
