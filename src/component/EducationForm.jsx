@@ -22,24 +22,74 @@ export default function EducationForm({ resumeData, setResumeData }) {
     });
   };
 
+  const handleSchoolName = (e) => {
+    setResumeData({
+      ...resumeData,
+      education: [...resumeData.education, { schoolName: e.target.value }],
+    });
+  };
+
+  const handleSchoolLocation = (e) => {
+    setResumeData({
+      ...resumeData,
+      education: [...resumeData.education, { schoolLocation: e.target.value }],
+    });
+  };
+
+  const handleMajor = (e) => {
+    setResumeData({
+      ...resumeData,
+      education: [...resumeData.education, { major: e.target.value }],
+    });
+  };
+
+  const handleStartDate = (e) => {
+    setResumeData({
+      ...resumeData,
+      education: [...resumeData.education, { startDate: e.target.value }],
+    });
+  };
+
+  const handleEndDate = (e) => {
+    setResumeData({
+      ...resumeData,
+      education: [...resumeData.education, { endDate: e.target.value }],
+    });
+  };
+
   return (
     <>
       <Section title="Education">
-        {resumeData.education.map((id) => {
-          <div className="education-inp" id={id}>
+        {resumeData.education.map((item) => {
+          <div className="education-inp" key={item.id}>
             <div>
               <label htmlFor="school-name">School Name</label>
-              <input type="text" name="school-name" id="school-name" />
+              <input
+                type="text"
+                name="school-name"
+                id="school-name"
+                onChange={handleSchoolName}
+              />
             </div>
 
             <div>
               <label htmlFor="school-location">School Location</label>
-              <input type="text" name="school-location" id="school-location" />
+              <input
+                type="text"
+                name="school-location"
+                id="school-location"
+                onChange={handleSchoolLocation}
+              />
             </div>
 
             <div>
               <label htmlFor="major">Major</label>
-              <input type="text" name="major" id="major" />
+              <input
+                type="text"
+                name="major"
+                id="major"
+                onChange={handleMajor}
+              />
             </div>
 
             <div className="school-date">
@@ -49,6 +99,7 @@ export default function EducationForm({ resumeData, setResumeData }) {
                   type="text"
                   name="school-start-date"
                   id="school-start-date"
+                  onChange={handleStartDate}
                 />
               </div>
 
@@ -58,6 +109,7 @@ export default function EducationForm({ resumeData, setResumeData }) {
                   type="text"
                   name="school-start-end"
                   id="school-start-end"
+                  onChange={handleEndDate}
                 />
               </div>
             </div>
