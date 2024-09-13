@@ -2,23 +2,38 @@ import Section from "./Section";
 
 export default function GeneralInfoForm({ resumeData, setResumeData }) {
   const handleFirstName = (e) => {
-    setResumeData({ ...resumeData, [resumeData.firstName]: e.target.value });
+    setResumeData({
+      ...resumeData,
+      generalInfo: { ...[resumeData.generalInfo], firstName: e.target.value },
+    });
   };
 
   const handleLastName = (e) => {
-    setResumeData({ ...resumeData, [resumeData.lastName]: e.target.value });
+    setResumeData({
+      ...resumeData,
+      generalInfo: { ...[resumeData.generalInfo], lastName: e.target.value },
+    });
   };
 
   const handleEmail = (e) => {
-    setResumeData({ ...resumeData, [resumeData.email]: e.target.value });
+    setResumeData({
+      ...resumeData,
+      generalInfo: { ...[resumeData.generalInfo], email: e.target.value },
+    });
   };
 
   const handlePhoneNumber = (e) => {
-    setResumeData({ ...resumeData, [resumeData.phoneNumber]: e.target.value });
+    setResumeData({
+      ...resumeData,
+      generalInfo: { ...[resumeData.generalInfo], phoneNumber: e.target.value },
+    });
   };
 
   const handleLocation = (e) => {
-    setResumeData({ ...resumeData, [resumeData.location]: e.target.value });
+    setResumeData({
+      ...resumeData,
+      generalInfo: { ...[resumeData.generalInfo], location: e.target.value },
+    });
   };
 
   return (
