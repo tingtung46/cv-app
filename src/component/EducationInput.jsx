@@ -13,7 +13,7 @@ export default function EducationInput({ itemID, handleChange, resumeData }) {
             onChange={(e) => {
               handleChange({
                 ...resumeData,
-                [itemID]: { ...resumeData.itemID, schoolName: e.target.value },
+                [itemID]: { ...resumeData[itemID], schoolName: e.target.value },
               });
             }}
           />
@@ -29,7 +29,7 @@ export default function EducationInput({ itemID, handleChange, resumeData }) {
               handleChange({
                 ...resumeData,
                 [itemID]: {
-                  ...resumeData.itemID,
+                  ...resumeData[itemID],
                   schoolLocation: e.target.value,
                 },
               });
@@ -46,7 +46,7 @@ export default function EducationInput({ itemID, handleChange, resumeData }) {
             onChange={(e) => {
               handleChange({
                 ...resumeData,
-                [itemID]: { ...resumeData.itemID, major: e.target.value },
+                [itemID]: { ...resumeData[itemID], major: e.target.value },
               });
             }}
           />
@@ -62,7 +62,10 @@ export default function EducationInput({ itemID, handleChange, resumeData }) {
               onChange={(e) => {
                 handleChange({
                   ...resumeData,
-                  [itemID]: { ...resumeData.itemID, startDate: e.target.value },
+                  [itemID]: {
+                    ...resumeData[itemID],
+                    startDate: e.target.value,
+                  },
                 });
               }}
             />
@@ -77,7 +80,7 @@ export default function EducationInput({ itemID, handleChange, resumeData }) {
               onChange={(e) => {
                 handleChange({
                   ...resumeData,
-                  [itemID]: { ...resumeData.itemID, endDate: e.target.value },
+                  [itemID]: { ...resumeData[itemID], endDate: e.target.value },
                 });
               }}
             />
