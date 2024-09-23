@@ -68,6 +68,35 @@ export default function ResumeUI({ resumeData }) {
             );
           })}
         </section>
+
+        <section className="ui projects">
+          <h2>Projects</h2>
+          {resumeData.projects.map((item) => {
+            return (
+              <div className="project-main" key={item}>
+                <div className="project-desc">
+                  <h3>{resumeData[item]["projectName"]}</h3>
+                  <p>
+                    {resumeData[item]["startDate"]} -{" "}
+                    {resumeData[item]["endDate"]}
+                  </p>
+                </div>
+
+                <p className="tools">{resumeData[item]["tools"]}</p>
+
+                <ul className="description">
+                  {resumeData[item]["description"]["map"]((itemID) => {
+                    return (
+                      <>
+                        <li key={itemID}>{resumeData[item][itemID]}</li>
+                      </>
+                    );
+                  })}
+                </ul>
+              </div>
+            );
+          })}
+        </section>
       </main>
     </>
   );
