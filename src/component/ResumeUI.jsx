@@ -8,6 +8,7 @@ export default function ResumeUI({ resumeData }) {
               " " +
               resumeData.generalInfo.lastName}
           </h1>
+
           <p>
             {resumeData.generalInfo.email} |{" "}
             {resumeData.generalInfo.phoneNumber} |{" "}
@@ -17,6 +18,7 @@ export default function ResumeUI({ resumeData }) {
 
         <section className="ui education">
           <h2>Education</h2>
+
           {resumeData.education.map((item) => {
             return (
               <div className="school-main" key={item}>
@@ -39,6 +41,7 @@ export default function ResumeUI({ resumeData }) {
 
         <section className="ui experience">
           <h2>Experience</h2>
+
           {resumeData.experience.map((item) => {
             return (
               <div className="experience-main" key={item}>
@@ -71,6 +74,7 @@ export default function ResumeUI({ resumeData }) {
 
         <section className="ui projects">
           <h2>Projects</h2>
+
           {resumeData.projects.map((item) => {
             return (
               <div className="project-main" key={item}>
@@ -96,6 +100,17 @@ export default function ResumeUI({ resumeData }) {
               </div>
             );
           })}
+        </section>
+
+        <section className="ui technical-skills">
+          <h2>Technical Skills</h2>
+
+          <div className="skills-wrapper">
+            <p>Program languages: {resumeData.technicalSkills.languages}</p>
+            <p>Frameworks: {resumeData.technicalSkills.frameworks}</p>
+            <p>Developer Tools: {resumeData.technicalSkills.devTools}</p>
+            <p>Libraries: {resumeData.technicalSkills.libraries}</p>
+          </div>
         </section>
       </main>
     </>
