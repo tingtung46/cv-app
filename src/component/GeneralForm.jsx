@@ -4,35 +4,35 @@ export default function GeneralInfoForm({ resumeData, setResumeData }) {
   const handleFirstName = (e) => {
     setResumeData({
       ...resumeData,
-      generalInfo: { ...[resumeData.generalInfo], firstName: e.target.value },
+      generalInfo: { ...resumeData.generalInfo, firstName: e.target.value },
     });
   };
 
   const handleLastName = (e) => {
     setResumeData({
       ...resumeData,
-      generalInfo: { ...[resumeData.generalInfo], lastName: e.target.value },
+      generalInfo: { ...resumeData.generalInfo, lastName: e.target.value },
     });
   };
 
   const handleEmail = (e) => {
     setResumeData({
       ...resumeData,
-      generalInfo: { ...[resumeData.generalInfo], email: e.target.value },
+      generalInfo: { ...resumeData.generalInfo, email: e.target.value },
     });
   };
 
   const handlePhoneNumber = (e) => {
     setResumeData({
       ...resumeData,
-      generalInfo: { ...[resumeData.generalInfo], phoneNumber: e.target.value },
+      generalInfo: { ...resumeData.generalInfo, phoneNumber: e.target.value },
     });
   };
 
   const handleLocation = (e) => {
     setResumeData({
       ...resumeData,
-      generalInfo: { ...[resumeData.generalInfo], location: e.target.value },
+      generalInfo: { ...resumeData.generalInfo, location: e.target.value },
     });
   };
 
