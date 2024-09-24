@@ -34,6 +34,7 @@ export default function ExperienceInput({ itemID, handleChange, resumeData }) {
                 },
               });
             }}
+            value={resumeData[itemID]["companyName"]}
           />
         </div>
 
@@ -52,6 +53,7 @@ export default function ExperienceInput({ itemID, handleChange, resumeData }) {
                 },
               });
             }}
+            value={resumeData[itemID]["location"]}
           />
         </div>
 
@@ -70,6 +72,7 @@ export default function ExperienceInput({ itemID, handleChange, resumeData }) {
                 },
               });
             }}
+            value={resumeData[itemID]["positionTitle"]}
           />
         </div>
 
@@ -89,6 +92,7 @@ export default function ExperienceInput({ itemID, handleChange, resumeData }) {
                   },
                 });
               }}
+              value={resumeData[itemID]["startDate"]}
             />
           </div>
 
@@ -104,6 +108,7 @@ export default function ExperienceInput({ itemID, handleChange, resumeData }) {
                   [itemID]: { ...resumeData[itemID], endDate: e.target.value },
                 });
               }}
+              value={resumeData[itemID]["endDate"]}
             />
           </div>
         </div>
@@ -126,6 +131,7 @@ export default function ExperienceInput({ itemID, handleChange, resumeData }) {
                           },
                         }),
                       ]}
+                      value={resumeData[itemID][item]}
                     />
                   </li>
                 </>

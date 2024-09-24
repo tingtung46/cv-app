@@ -16,6 +16,7 @@ export default function EducationInput({ itemID, handleChange, resumeData }) {
                 [itemID]: { ...resumeData[itemID], schoolName: e.target.value },
               });
             }}
+            value={resumeData[itemID]["schoolName"]}
           />
         </div>
 
@@ -34,6 +35,7 @@ export default function EducationInput({ itemID, handleChange, resumeData }) {
                 },
               });
             }}
+            value={resumeData[itemID]["schoolLocation"]}
           />
         </div>
 
@@ -49,6 +51,7 @@ export default function EducationInput({ itemID, handleChange, resumeData }) {
                 [itemID]: { ...resumeData[itemID], major: e.target.value },
               });
             }}
+            value={resumeData[itemID]["major"]}
           />
         </div>
 
@@ -68,6 +71,7 @@ export default function EducationInput({ itemID, handleChange, resumeData }) {
                   },
                 });
               }}
+              value={resumeData[itemID]["startDate"]}
             />
           </div>
 
@@ -83,6 +87,7 @@ export default function EducationInput({ itemID, handleChange, resumeData }) {
                   [itemID]: { ...resumeData[itemID], endDate: e.target.value },
                 });
               }}
+              value={resumeData[itemID]["endDate"]}
             />
           </div>
         </div>

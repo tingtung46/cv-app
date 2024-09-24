@@ -47,6 +47,7 @@ export default function GeneralInfoForm({ resumeData, setResumeData }) {
               name="first-name"
               id="first-name"
               onChange={handleFirstName}
+              value={resumeData.generalInfo.firstName}
             />
           </div>
           <div>
@@ -56,6 +57,7 @@ export default function GeneralInfoForm({ resumeData, setResumeData }) {
               name="last-name"
               id="last-name"
               onChange={handleLastName}
+              value={resumeData.generalInfo.lastName}
             />
           </div>
         </div>
@@ -67,6 +69,7 @@ export default function GeneralInfoForm({ resumeData, setResumeData }) {
             name="email-address"
             id="email-address"
             onChange={handleEmail}
+            value={resumeData.generalInfo.email}
           />
         </div>
 
@@ -77,6 +80,7 @@ export default function GeneralInfoForm({ resumeData, setResumeData }) {
             name="phone-number"
             id="phone-number"
             onChange={handlePhoneNumber}
+            value={resumeData.generalInfo.phoneNumber}
           />
         </div>
 
@@ -87,6 +91,7 @@ export default function GeneralInfoForm({ resumeData, setResumeData }) {
             name="location"
             id="location"
             onChange={handleLocation}
+            value={resumeData.generalInfo.location}
           />
         </div>
       </>

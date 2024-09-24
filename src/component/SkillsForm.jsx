@@ -51,6 +51,7 @@ export default function SkillsForm({ resumeData, setResumeData }) {
             name="program-languages"
             id="program-languages"
             onChange={handleLanguages}
+            value={resumeData.technicalSkills.languages}
           />
         </div>
 
@@ -61,6 +62,7 @@ export default function SkillsForm({ resumeData, setResumeData }) {
             name="frameworks"
             id="frameworks"
             onChange={handleFrameworks}
+            value={resumeData.technicalSkills.frameworks}
           />
         </div>
 
@@ -71,6 +73,7 @@ export default function SkillsForm({ resumeData, setResumeData }) {
             name="dev-tools"
             id="dev-tools"
             onChange={handleDevTools}
+            value={resumeData.technicalSkills.devTools}
           />
         </div>
 
@@ -81,6 +84,7 @@ export default function SkillsForm({ resumeData, setResumeData }) {
             name="libraries"
             id="libraries"
             onChange={handleLibraries}
+            value={resumeData.technicalSkills.libraries}
           />
         </div>
       </Section>

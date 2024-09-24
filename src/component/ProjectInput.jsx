@@ -35,6 +35,7 @@ export default function ProjectInput({ itemID, handleChange, resumeData }) {
                   },
                 });
               }}
+              value={resumeData[itemID]["projectName"]}
             />
           </div>
 
@@ -53,6 +54,7 @@ export default function ProjectInput({ itemID, handleChange, resumeData }) {
                   },
                 });
               }}
+              value={resumeData[itemID]["tools"]}
             />
           </div>
 
@@ -72,6 +74,7 @@ export default function ProjectInput({ itemID, handleChange, resumeData }) {
                     },
                   });
                 }}
+                value={resumeData[itemID]["startDate"]}
               />
             </div>
 
@@ -90,6 +93,7 @@ export default function ProjectInput({ itemID, handleChange, resumeData }) {
                     },
                   });
                 }}
+                value={resumeData[itemID]["endDate"]}
               />
             </div>
           </div>
@@ -111,6 +115,7 @@ export default function ProjectInput({ itemID, handleChange, resumeData }) {
                           },
                         });
                       }}
+                      value={resumeData[itemID][item]}
                     />
                   </li>
                 );
