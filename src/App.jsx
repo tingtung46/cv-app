@@ -13,7 +13,7 @@ function App() {
   const [resumeData, setResumeData] = useState(emptyData);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  if (isSubmitted === false) {
+  if (!isSubmitted) {
     return (
       <>
         <main>
