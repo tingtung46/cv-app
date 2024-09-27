@@ -1,7 +1,7 @@
 export default function ResumeUI({ resumeData }) {
   return (
     <>
-      <main>
+      <section className="resume-ui">
         <section className="ui general">
           <h1>
             {resumeData.generalInfo.firstName +
@@ -112,7 +112,7 @@ export default function ResumeUI({ resumeData }) {
             <p>Libraries: {resumeData.technicalSkills.libraries}</p>
           </div>
         </section>
-      </main>
+      </section>
     </>
   );
 }

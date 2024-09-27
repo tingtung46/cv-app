@@ -16,7 +16,7 @@ function App() {
   if (!isSubmitted) {
     return (
       <>
-        <main>
+        <section className="app">
           <GeneralInfoForm
             resumeData={resumeData}
             setResumeData={setResumeData}
@@ -41,7 +41,7 @@ function App() {
             className="submit-btn"
             text="Create Resume"
           />
-        </main>
+        </section>
       </>
     );
   } else {

@@ -37,14 +37,14 @@ export default function ProjectForm({ resumeData, setResumeData }) {
             />
           );
         })}
-      </Section>
 
-      <Button
-        type="button"
-        onClick={handleProject}
-        className="add-project"
-        text="Add Project"
-      />
+        <Button
+          type="button"
+          onClick={handleProject}
+          className="add-project"
+          text="Add Project"
+        />
+      </Section>
     </>
   );
 }
