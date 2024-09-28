@@ -4,6 +4,7 @@ export default function EducationInput({ itemID, handleChange, resumeData }) {
   return (
     <Fragment>
       <div className="education-input">
+        <h3>School {resumeData[itemID]["schoolIndex"]}</h3>
         <div className="input">
           <label htmlFor="school-name">School Name</label>
           <input

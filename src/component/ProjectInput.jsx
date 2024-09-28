@@ -20,6 +20,7 @@ export default function ProjectInput({ itemID, handleChange, resumeData }) {
     <>
       <Fragment>
         <div className="project-input">
+          <h3>Project {resumeData[itemID]["projectIndex"]}</h3>
           <div className="input">
             <label htmlFor="project-name">Project Name</label>
             <input

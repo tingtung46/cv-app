@@ -2,15 +2,21 @@ import { v4 as uuidv4 } from "uuid";
 import EducationInput from "./EducationInput";
 import Button from "./Button";
 import Section from "./Section";
+import { useState } from "react";
 
 export default function EducationForm({ resumeData, setResumeData }) {
+  const [index, setIndex] = useState(1);
+
   const handleEducation = () => {
     const newID = uuidv4();
+
+    setIndex(index + 1);
 
     setResumeData({
       ...resumeData,
       education: [...resumeData.education, [newID]],
       [newID]: {
+        schoolIndex: index,
         schoolName: "",
         schoolLocation: "",
         major: "",

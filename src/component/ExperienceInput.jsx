@@ -19,6 +19,7 @@ export default function ExperienceInput({ itemID, handleChange, resumeData }) {
   return (
     <Fragment>
       <div className="experience-input">
+        <h3>Experience {resumeData[itemID]["experienceIndex"]}</h3>
         <div className="input">
           <label htmlFor="company-name">Company Name</label>
           <input

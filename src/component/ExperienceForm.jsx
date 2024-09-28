@@ -2,15 +2,21 @@ import { v4 as uuidv4 } from "uuid";
 import ExperienceInput from "./ExperienceInput";
 import Section from "./Section";
 import Button from "./Button";
+import { useState } from "react";
 
 export default function ExperienceForm({ resumeData, setResumeData }) {
+  const [index, setIndex] = useState(1);
+
   const handleExperience = () => {
     const newID = uuidv4();
+
+    setIndex(index + 1);
 
     setResumeData({
       ...resumeData,
       experience: [...resumeData.experience, [newID]],
       [newID]: {
+        experienceIndex: index,
         companyName: "",
         location: "",
         positionTitle: "",
